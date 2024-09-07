@@ -13,13 +13,13 @@ Este proyecto es una implementación en Python de un sistema de cotización de v
 1. Clona el repositorio:
 
     ```bash
-    git clone https://github.com/usuario/sistema-cotizacion-ventanas.git
+    git clone https://github.com/ENZOCIO/parcial1programacion1
     ```
 
 2. Navega al directorio del proyecto:
 
     ```bash
-    cd sistema-cotizacion-ventanas
+    cd parcial1programacion1
     ```
 
 3. (Opcional) Crea un entorno virtual:
