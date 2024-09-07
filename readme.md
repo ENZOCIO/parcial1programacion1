@@ -70,7 +70,7 @@ Este proyecto es una implementación en Python de un sistema de cotización de v
 
 Aquí se incluiría un enlace al diagrama de clases UML, si estuviera disponible.
 
-![Diagrama UML](imagenes/Cotizacion.png)
+![Diagrama UML](docs/Cotizacion.png)
 
 ## Autor
 
