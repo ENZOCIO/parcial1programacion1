@@ -97,7 +97,7 @@ def main():
             print(f"\nEl costo total de la cotización es: ${total:.2f}")
         
         elif opcion == "4":
-            print("Saliendo del sistema. ¡Hasta pronto!")
+            print("Saliendo del sistema. ¡Hasta pronto! By Enzo Gonzalez Caicedo")
             break
         
         else:
