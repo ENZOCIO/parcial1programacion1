@@ -1,4 +1,4 @@
-import pytest
+
 from models.cliente import Cliente
 from models.vidrio import Vidrio
 from models.acabado import Acabado
