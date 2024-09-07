@@ -1,17 +1,11 @@
+# models/cliente.py
 class Cliente:
-    """
-    Representa a un cliente del sistema de cotización de ventanas.
-    
-    Atributos:
-        nombre (str): Nombre del cliente.
-        tipo_cliente (str): Tipo de cliente (ej. empresa constructora).
-        direccion (str): Dirección del cliente.
-    """
-    
-    def __init__(self, nombre, tipo_cliente, direccion):
+    def __init__(self, nombre: str, tipo: str, direccion: str):
         self.nombre = nombre
-        self.tipo_cliente = tipo_cliente
+        self.tipo = tipo
         self.direccion = direccion
 
-    def __str__(self):
-        return f"{self.nombre} - {self.tipo_cliente} - {self.direccion}"
+    def __str__(self) -> str:
+        return (f"Nombre: {self.nombre}\n"
+                f"Tipo: {self.tipo}\n"
+                f"Dirección: {self.direccion}")

@@ -1,28 +1,24 @@
+# models/cotizacion.py
+from models.cliente import Cliente
+from models.ventana import Ventana
+
 class Cotizacion:
-    """
-    Representa una cotización de ventanas.
-    
-    Atributos:
-        cliente (Cliente): Cliente que solicita la cotización.
-        ventanas (list): Lista de ventanas cotizadas.
-        descuento (float): Porcentaje de descuento si aplica.
-    """
-    
-    def __init__(self, cliente, descuento=0.0):
+    def __init__(self, cliente: Cliente, descuento: float = 0):
         self.cliente = cliente
         self.ventanas = []
         self.descuento = descuento
 
-    def agregar_ventana(self, ventana):
+    def agregar_ventana(self, ventana: Ventana):
         """Agrega una ventana a la cotización."""
         self.ventanas.append(ventana)
 
-    def calcular_total(self):
-        """Calcula el costo total de la cotización, aplicando el descuento si corresponde."""
-        total = sum(ventana.calcular_costo() for ventana in self.ventanas)
-        if len(self.ventanas) > 100:
-            total *= 1 - (self.descuento / 100)
-        return total
+    def calcular_total(self) -> float:
+        """Calcula el costo total de la cotización considerando el descuento."""
+        total = sum(ventana.costo_total() for ventana in self.ventanas)
+        total_con_descuento = total * (1 - self.descuento / 100)
+        return round(total_con_descuento, 2)
 
-    def __str__(self):
-        return f"Cotización para {self.cliente.nombre}, {len(self.ventanas)} ventanas"
+    def __str__(self) -> str:
+        return (f"Cliente:\n{self.cliente}\n"
+                f"Ventanas:\n" + "\n".join(str(ventana) for ventana in self.ventanas) + "\n"
+                f"Total con descuento: ${self.calcular_total():.2f}")
