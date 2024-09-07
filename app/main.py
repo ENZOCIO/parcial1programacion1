@@ -1,9 +1,9 @@
-from clases.cliente import Cliente
-from clases.vidrio import Vidrio
-from clases.acabado import Acabado
-from clases.nave import Nave
-from clases.ventana import Ventana
-from clases.cotizacion import Cotizacion
+from models.cliente import Cliente
+from models.vidrio import Vidrio
+from models.acabado import Acabado
+from models.nave import Nave
+from models.ventana import Ventana
+from models.cotizacion import Cotizacion
 
 
 def crear_cliente():
